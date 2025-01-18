@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 input;
 
+    private Animator animator;
 
+    private void Awake() {
+        animator = GetComponent<Animator>();
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,9 +29,16 @@ public class PlayerController : MonoBehaviour
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
+            Debug.Log("Input x: " + input.x);
+            Debug.Log("Input y: " + input.y);
+
+
 
             if (input != Vector2.zero)
             {
+                animator.SetFloat("moveX", input.x);
+                animator.SetFloat("moveY", input.y);
+                
                 var targetPos = transform.position;
                 targetPos.x += input.x;
                 targetPos.y += input.y;
