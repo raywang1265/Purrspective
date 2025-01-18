@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cat-office-white-front-idle_0: -9008608336543313720
+      cat-office-white-front-idle_1: -5428579557899399473
+      cat-office-white-front-idle_2: -804347091176684678
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

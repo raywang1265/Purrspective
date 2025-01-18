@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cat-office-white-side-walk-left_0: 546657757959637530
+      cat-office-white-side-walk-left_1: 6583861327814237372
+      cat-office-white-side-walk-left_2: -8658112438574923658
+      cat-office-white-side-walk-left_3: 4048357556402257762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
