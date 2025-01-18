@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    private LayerMask solidObjectsLayer;
+
     private void Awake() {
         animator = GetComponent<Animator>();
     }
@@ -25,12 +27,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(solidObjectsLayer);
         if (!isMoving)
         {
             input.x = Input.GetAxisRaw("Horizontal");
             input.y = Input.GetAxisRaw("Vertical");
-            Debug.Log("Input x: " + input.x);
-            Debug.Log("Input y: " + input.y);
+            // Debug.Log("Input x: " + input.x);
+            // Debug.Log("Input y: " + input.y);
 
 
 
@@ -43,7 +46,9 @@ public class PlayerController : MonoBehaviour
                 targetPos.x += input.x;
                 targetPos.y += input.y;
 
-                StartCoroutine(Move(targetPos));
+                if (IsWalkable(targetPos)) {
+                    StartCoroutine(Move(targetPos));
+                }
             }
         }
 
@@ -61,4 +66,15 @@ public class PlayerController : MonoBehaviour
         transform.position = targetPos;
         isMoving = false;
     }
+
+    private bool IsWalkable(Vector3 targetPos) {
+        
+        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null) {
+            Debug.Log("Unable to walk!");
+            return false;
+        } 
+        return true;
+    } 
 }
+
+
