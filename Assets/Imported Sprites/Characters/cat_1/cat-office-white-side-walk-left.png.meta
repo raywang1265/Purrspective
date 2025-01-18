@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 8cdc6ec03674b4f4b9926f08b5fac5ed
+guid: 33b58fb071e87477abeeaa3329f831de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9057424212083546315
-    second: cat-office-white-side-walk_0
+      213: 546657757959637530
+    second: cat-office-white-side-walk-left_0
   - first:
-      213: 6458407036396532128
-    second: cat-office-white-side-walk_1
+      213: 6583861327814237372
+    second: cat-office-white-side-walk-left_1
   - first:
-      213: 8853289366444905749
-    second: cat-office-white-side-walk_2
+      213: -8658112438574923658
+    second: cat-office-white-side-walk-left_2
   - first:
-      213: 3664590120018764620
-    second: cat-office-white-side-walk_3
+      213: 4048357556402257762
+    second: cat-office-white-side-walk-left_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat-office-white-side-walk_0
+      name: cat-office-white-side-walk-left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 537ecbadaa09d4280800000000000000
-      internalID: -9057424212083546315
+      spriteID: a1a45e4a55e169700800000000000000
+      internalID: 546657757959637530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-side-walk_1
+      name: cat-office-white-side-walk-left_1
       rect:
         serializedVersion: 2
         x: 16
@@ -146,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a17c434bfed0a950800000000000000
-      internalID: 6458407036396532128
+      spriteID: cbc9cceaef29e5b50800000000000000
+      internalID: 6583861327814237372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-side-walk_2
+      name: cat-office-white-side-walk-left_2
       rect:
         serializedVersion: 2
         x: 32
@@ -168,14 +168,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51511b4a5c33dda70800000000000000
-      internalID: 8853289366444905749
+      spriteID: 670c9591c9438d780800000000000000
+      internalID: -8658112438574923658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-side-walk_3
+      name: cat-office-white-side-walk-left_3
       rect:
         serializedVersion: 2
         x: 48
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c43ef1f5c4d3bd230800000000000000
-      internalID: 3664590120018764620
+      spriteID: 26fff199fb7ae2830800000000000000
+      internalID: 4048357556402257762
       vertices: []
       indices: 
       edges: []
@@ -209,11 +209,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cat-office-white-side-walk_0: -9057424212083546315
-      cat-office-white-side-walk_1: 6458407036396532128
-      cat-office-white-side-walk_2: 8853289366444905749
-      cat-office-white-side-walk_3: 3664590120018764620
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
