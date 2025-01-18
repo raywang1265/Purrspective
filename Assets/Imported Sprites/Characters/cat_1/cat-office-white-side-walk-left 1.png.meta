@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: c78202742c0784d88a3b4531f3bb5706
+guid: 6bff3be0525aa42a883939c49cd855b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8085706714844456198
-    second: cat-office-white-back-walk_0
+      213: 478208808060056926
+    second: cat-office-white-side-walk-left 1_0
   - first:
-      213: 7278394487471381064
-    second: cat-office-white-back-walk_1
+      213: 5187627020617216771
+    second: cat-office-white-side-walk-left 1_1
   - first:
-      213: 7330838043103929458
-    second: cat-office-white-back-walk_2
+      213: 521092189692948542
+    second: cat-office-white-side-walk-left 1_2
   - first:
-      213: 1602658261332201387
-    second: cat-office-white-back-walk_3
+      213: -1997388704606025250
+    second: cat-office-white-side-walk-left 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cat-office-white-back-walk_0
+      name: cat-office-white-side-walk-left 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afa94bf259cc9cf80800000000000000
-      internalID: -8085706714844456198
+      spriteID: e55f1e49060f2a600800000000000000
+      internalID: 478208808060056926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-back-walk_1
+      name: cat-office-white-side-walk-left 1_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 16
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,14 +146,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 84a94e8493d020560800000000000000
-      internalID: 7278394487471381064
+      spriteID: 3037b1f3a472ef740800000000000000
+      internalID: 5187627020617216771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-back-walk_2
+      name: cat-office-white-side-walk-left 1_2
       rect:
         serializedVersion: 2
         x: 32
@@ -168,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27421291c5e5cb560800000000000000
-      internalID: 7330838043103929458
+      spriteID: e30f0ede59a4b3700800000000000000
+      internalID: 521092189692948542
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cat-office-white-back-walk_3
+      name: cat-office-white-side-walk-left 1_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 16
+        height: 15
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: baf0d0b8239cd3610800000000000000
-      internalID: 1602658261332201387
+      spriteID: ed984974e89d744e0800000000000000
+      internalID: -1997388704606025250
       vertices: []
       indices: 
       edges: []
@@ -200,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 822f614a198d543d4b8ec8a94c41a90c
+    spriteID: 8bbbd89bbb3c1427bbc14164c9672d7b
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cat-office-white-back-walk_0: -8085706714844456198
-      cat-office-white-back-walk_1: 7278394487471381064
-      cat-office-white-back-walk_2: 7330838043103929458
-      cat-office-white-back-walk_3: 1602658261332201387
+      cat-office-white-side-walk-left 1_0: 478208808060056926
+      cat-office-white-side-walk-left 1_1: 5187627020617216771
+      cat-office-white-side-walk-left 1_2: 521092189692948542
+      cat-office-white-side-walk-left 1_3: -1997388704606025250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
