@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cat-waiter-back_0: -9173540476277069544
+      cat-waiter-back_1: 387516215103050123
+      cat-waiter-back_2: 8757338896345091696
+      cat-waiter-back_3: -844782539406061155
+      cat-waiter-back_4: -7615583796754680949
+      cat-waiter-back_5: -5731171433809859347
+      cat-waiter-back_6: -3392940835619675309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
