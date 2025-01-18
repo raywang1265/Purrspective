@@ -959,7 +959,41 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dogspritesheet_0: 5070412764433465026
+      dogspritesheet_1: -4880100930409398267
+      dogspritesheet_10: -254320211595879519
+      dogspritesheet_11: -1931819834451011245
+      dogspritesheet_12: -4295750036871452758
+      dogspritesheet_13: -5535130274923026240
+      dogspritesheet_14: -8045134955192084618
+      dogspritesheet_15: 7729092292070787411
+      dogspritesheet_16: -1233259820709477614
+      dogspritesheet_17: 5061258711155189469
+      dogspritesheet_18: 4121716295644208194
+      dogspritesheet_19: -5272562055585662186
+      dogspritesheet_2: -4090942028584729610
+      dogspritesheet_20: 5174722047568834557
+      dogspritesheet_21: 1668362474114451329
+      dogspritesheet_22: -7502320491217502621
+      dogspritesheet_23: -2953215327007508802
+      dogspritesheet_24: 4917397374671505650
+      dogspritesheet_25: 1376263632631639422
+      dogspritesheet_26: -1083511482066644936
+      dogspritesheet_27: -3837871430856193632
+      dogspritesheet_28: -8438740555395512179
+      dogspritesheet_29: -1233710597888669502
+      dogspritesheet_3: -6059372242953551988
+      dogspritesheet_30: -4909370473779164454
+      dogspritesheet_31: -3708466563620039004
+      dogspritesheet_32: 1241217637252114213
+      dogspritesheet_33: -3913910820187995439
+      dogspritesheet_4: 5602633925629500444
+      dogspritesheet_5: 9098172706762576337
+      dogspritesheet_6: -6387548528716392718
+      dogspritesheet_7: 8760647834926912855
+      dogspritesheet_8: -5396393334374549876
+      dogspritesheet_9: 2499882432048179009
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
