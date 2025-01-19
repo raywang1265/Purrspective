@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3201857099012696023, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6338932780040900881, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
       propertyPath: m_LocalScale.x
       value: 5
@@ -26,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338932780040900881, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6338932780040900881, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -60,7 +64,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: character Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8449071657534805792, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8449071657534805792, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -79,6 +88,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6892295047707574228, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1048630705576779798}
+    - targetCorrespondingSourceObject: {fileID: 6892295047707574228, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7793756203674925599}
+    - targetCorrespondingSourceObject: {fileID: 6892295047707574228, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8895259254673052856}
   m_SourcePrefab: {fileID: 100100000, guid: ff2ceec5cac274af7a89982bba709ec4, type: 3}
 --- !u!1 &4757673589822152473 stripped
 GameObject:
@@ -123,7 +138,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
+  rb: {fileID: -7793756203674925599}
   moveSpeed: 5
+  solidObjectsLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &7077191685126217549
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -158,7 +177,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.075}
+  m_Offset: {x: 0, y: 0.009329163}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -168,7 +187,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.15}
+  m_Size: {x: 0.16, y: 0.030204967}
   m_EdgeRadius: 0
 --- !u!95 &94013047308204541
 Animator:
@@ -228,3 +247,47 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!50 &-7793756203674925599
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757673589822152473}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &-8895259254673052856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4757673589822152473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80d7c879794dfda4687da0e400131852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkRigidbodyBaseExpanded: 0
+  UseRigidBodyForMotion: 1
+  AutoUpdateKinematicState: 1
+  AutoSetKinematicOnDespawn: 1
