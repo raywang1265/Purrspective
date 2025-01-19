@@ -28,7 +28,6 @@ public class PlayerControllerServer : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(solidObjectsLayer);
 
         if (!IsOwner) {
             return;
@@ -45,6 +44,7 @@ public class PlayerControllerServer : NetworkBehaviour
 
             if (input != Vector2.zero)
             {
+                // MoveServerRpc(input);
                 animator.SetFloat("moveX", input.x);
                 animator.SetFloat("moveY", input.y);
 
@@ -73,10 +73,22 @@ public class PlayerControllerServer : NetworkBehaviour
         isMoving = false;
     }
 
+    [ServerRpc]
+    void MoveServerRpc(Vector2 input)
+    {
+        var targetPos = transform.position;
+        targetPos.x += input.x;
+        targetPos.y += input.y;
+
+        if (IsWalkable(targetPos))
+        {
+            StartCoroutine(Move(targetPos));
+        }
+    }
+
     private bool IsWalkable(Vector3 targetPos) {
         
         if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null) {
-            Debug.Log("Unable to walk!");
             return false;
         } 
         return true;
