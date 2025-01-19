@@ -22,6 +22,8 @@ public class PlayerControllerServer : NetworkBehaviour
 
     public LayerMask solidObjectsLayer;
 
+    public SliderController sliderController;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -29,14 +31,17 @@ public class PlayerControllerServer : NetworkBehaviour
 
     void Start()
     {
+        sliderController = GameObject.Find("Slider").GetComponent<SliderController>();
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         if (IsServer && IsClient)
         {
             transform.position = new Vector3(28.5f, -40.5f, -1);
+            sliderController.hostPosition = transform.position;
         }
         else if (IsClient)
-        {
+        {   
             transform.position = new Vector3(-7.5f, 8.5f, -1);
+            sliderController.clientPosition = transform.position;
         }
     }
 
@@ -53,6 +58,9 @@ public class PlayerControllerServer : NetworkBehaviour
         // Get player input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
+
+        sliderController.hostPosition = transform.position;
+        sliderController.clientPosition = transform.position;
 
         if (input != Vector2.zero)
         {
