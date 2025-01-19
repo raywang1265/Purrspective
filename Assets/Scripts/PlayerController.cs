@@ -1,80 +1,58 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed;
+    public Rigidbody2D rb;
 
-    private bool isMoving;
+    public float moveSpeed;
 
     private Vector2 input;
 
     private Animator animator;
 
-    private LayerMask solidObjectsLayer;
+    public LayerMask solidObjectsLayer;
 
-    private void Awake() {
+    private void Awake()
+    {
         animator = GetComponent<Animator>();
     }
 
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Debug.Log(solidObjectsLayer);
-        if (!isMoving)
+        // Get player input
+        input.x = Input.GetAxisRaw("Horizontal");
+        input.y = Input.GetAxisRaw("Vertical");
+
+        if (input != Vector2.zero)
         {
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-            // Debug.Log("Input x: " + input.x);
-            // Debug.Log("Input y: " + input.y);
+            animator.SetFloat("moveX", input.x);
+            animator.SetFloat("moveY", input.y);
 
-
-
-            if (input != Vector2.zero)
+            // Check if the target position is walkable
+            Vector2 targetPos = rb.position + input.normalized * moveSpeed * Time.fixedDeltaTime;
+            if (!IsWalkable(targetPos))
             {
-                animator.SetFloat("moveX", input.x);
-                animator.SetFloat("moveY", input.y);
-
-                var targetPos = transform.position;
-                targetPos.x += input.x;
-                targetPos.y += input.y;
-
-                if (IsWalkable(targetPos)) {
-                    StartCoroutine(Move(targetPos));
-                }
+                input = Vector2.zero; // Stop movement if the target position is blocked
             }
         }
 
-        animator.SetBool("isMoving", isMoving);
-        
+        animator.SetBool("isMoving", input != Vector2.zero);
     }
 
-    IEnumerator Move(Vector3 targetPos) {
-        isMoving = true;
-        while ((targetPos - transform.position).sqrMagnitude > float.Epsilon)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetPos, moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-        transform.position = targetPos;
-        isMoving = false;
+    private void FixedUpdate()
+    {
+        // Apply velocity for movement
+        rb.linearVelocity = input.normalized * moveSpeed;
     }
 
-    private bool IsWalkable(Vector3 targetPos) {
-        
-        if (Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) != null) {
-            Debug.Log("Unable to walk!");
-            return false;
-        } 
-        return true;
-    } 
+    private bool IsWalkable(Vector2 targetPos)
+    {
+        // Check for solid objects at the target position
+        return Physics2D.OverlapCircle(targetPos, 0.2f, solidObjectsLayer) == null;
+    }
 }
-
-
