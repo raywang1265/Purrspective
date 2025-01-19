@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask solidObjectsLayer;
 
+    public bool hasKey = false;
+
+    public bool dead = false;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
