@@ -60,7 +60,7 @@ public class StartPageScript : MonoBehaviour
         if (NetworkManager.Singleton.ConnectedClients.Count == 2) // Host + 1 client
         {
             UpdateStatus("All players connected. Loading level...");
-            SceneManager.LoadScene("level"); // Load the next scene
+            NetworkManager.Singleton.SceneManager.LoadScene("level", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
     }
 
