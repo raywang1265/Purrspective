@@ -30,6 +30,14 @@ public class PlayerControllerServer : NetworkBehaviour
     void Start()
     {
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        if (IsServer && IsClient)
+        {
+            transform.position = new Vector3(28.5f, -40.5f, -1);
+        }
+        else if (IsClient)
+        {
+            transform.position = new Vector3(-7.5f, 8.5f, -1);
+        }
     }
 
     void Update()
