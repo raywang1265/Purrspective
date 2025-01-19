@@ -30,12 +30,8 @@ public class KeyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnBecameInvisible()
-    {
-        // Remove the sprite from the scene when it leaves the camera view
-        Destroy(gameObject);
+        if (transform.position.y < -100) {
+            Destroy(gameObject);
+        }
     }
 }
