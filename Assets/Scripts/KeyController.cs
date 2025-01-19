@@ -9,7 +9,7 @@ public class KeyController : MonoBehaviour
     void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
         GameObject player = collision.gameObject;
-        player.GetComponent<PlayerController>().hasKey = true;
+        player.GetComponent<PlayerControllerServer>().hasKey = true;
         // Set gravity scale to 1
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 3);
         rb.gravityScale = 1;
@@ -30,12 +30,8 @@ public class KeyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnBecameInvisible()
-    {
-        // Remove the sprite from the scene when it leaves the camera view
-        Destroy(gameObject);
+        if (transform.position.y < -100) {
+            Destroy(gameObject);
+        }
     }
 }
