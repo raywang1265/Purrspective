@@ -20,6 +20,8 @@ public class PlayerControllerServer : NetworkBehaviour
 
     private Animator animator;
 
+    private float randomFloat;
+
     public LayerMask solidObjectsLayer;
 
     private void Awake()
@@ -29,6 +31,9 @@ public class PlayerControllerServer : NetworkBehaviour
 
     void Start()
     {
+        System.Random random = new System.Random();
+        randomFloat = (float)random.NextDouble(); 
+
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
         if (IsServer && IsClient)
         {
@@ -56,6 +61,14 @@ public class PlayerControllerServer : NetworkBehaviour
 
         if (input != Vector2.zero)
         {
+            // randomly switch the x and y axis
+            // if (randomFloat < 0.1) {    
+            //     animator.SetFloat("moveX", input.y);
+            //     animator.SetFloat("moveY", input.x);
+            // } else {
+            //     animator.SetFloat("moveX", input.x);
+            //     animator.SetFloat("moveY", input.y);
+            // }
             animator.SetFloat("moveX", input.x);
             animator.SetFloat("moveY", input.y);
 
