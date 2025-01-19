@@ -1,18 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class SliderController : MonoBehaviour
 {
     // Reference to the Unity Slider component
     public Slider slider;
 
-    public GameObject hostPlayer;
-    public GameObject clientPlayer;
-
     // Public values for min, max, and current value
     public float minValue = 0f;
-    public float maxValue = 82.5f;
+    public float maxValue = 1f;
+    public float currentValue = 0.5f;
 
     void Start()
     {
@@ -23,20 +20,51 @@ public class SliderController : MonoBehaviour
         }
 
         // Set the Slider's initial values
-        SetCurrentValueAsDistance()
+        SetSliderValues(minValue, maxValue, currentValue);
     }
 
     void Update()
     {
         // Continuously ensure the current value stays within the min and max bounds
-        SetCurrentValueAsDistance();  // Update the slider’s handle position
+        currentValue = Mathf.Clamp(currentValue, minValue, maxValue);
+        slider.value = currentValue;  // Update the slider’s handle position
+    }
+
+    // Method to set all values (min, max, and current)
+    public void SetSliderValues(float min, float max, float current)
+    {
+        minValue = min;
+        maxValue = max;
+        currentValue = Mathf.Clamp(current, minValue, maxValue);  // Ensure the current value is valid
+
+        // Update the slider component with the new values
+        slider.minValue = minValue;
+        slider.maxValue = maxValue;
+        slider.value = currentValue;
+    }
+
+    // Method to change the min value
+    public void SetMinValue(float min)
+    {
+        minValue = min;
+        slider.minValue = minValue;
+        currentValue = Mathf.Clamp(currentValue, minValue, maxValue);
+        slider.value = currentValue;
+    }
+
+    // Method to change the max value
+    public void SetMaxValue(float max)
+    {
+        maxValue = max;
+        slider.maxValue = maxValue;
+        currentValue = Mathf.Clamp(currentValue, minValue, maxValue);
+        slider.value = currentValue;
     }
 
     // Method to change the current value
-    public void SetCurrentValueAsDistance()
+    public void SetCurrentValue(float value)
     {
-        slider.value = Math.Sqrt((hostPlayer.transform.position.x - clientPlayer.transform.position.x) * (hostPlayer.transform.position.x - clientPlayer.transform.position.x) + 
-                                 (hostPlayer.transform.position.y - clientPlayer.transform.position.y) * (hostPlayer.transform.position.y - clientPlayer.transform.position.y));
-        
+        currentValue = Mathf.Clamp(value, minValue, maxValue);
+        slider.value = currentValue;
     }
 }
