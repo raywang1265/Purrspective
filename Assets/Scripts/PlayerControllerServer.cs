@@ -4,7 +4,15 @@ using Unity.Netcode; // Or Mirror namespace
 
 public class PlayerControllerServer : NetworkBehaviour
 {
+
+    [SerializeField] private Camera playerCamera;
+
     public Rigidbody2D rb;
+
+    public bool hasKey = false;
+
+    public bool dead = false;
+
 
     public float moveSpeed;
 
@@ -28,7 +36,11 @@ public class PlayerControllerServer : NetworkBehaviour
     {
 
         if (!IsOwner) {
+            playerCamera.gameObject.SetActive(false);
             return;
+        } else {
+            playerCamera.gameObject.SetActive(true);
+
         }
         // Get player input
         input.x = Input.GetAxisRaw("Horizontal");
