@@ -21,7 +21,7 @@ public class DogController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        other.GetComponent<PlayerController>().dead = true;
+        other.GetComponent<PlayerControllerServer>().dead = true;
         //do shit to restart game
     }
 

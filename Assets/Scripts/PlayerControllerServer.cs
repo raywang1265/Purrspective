@@ -36,10 +36,10 @@ public class PlayerControllerServer : NetworkBehaviour
     {
 
         if (!IsOwner) {
-            playerCamera.gameObject.SetActive(false);
+            playerCamera.gameObject.SetActive(true);
             return;
         } else {
-            playerCamera.gameObject.SetActive(true);
+            playerCamera.gameObject.SetActive(false);
 
         }
         // Get player input

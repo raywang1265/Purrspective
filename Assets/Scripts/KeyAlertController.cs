@@ -15,7 +15,7 @@ public class KeyAlertController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject player = other.gameObject;
-        if (player.GetComponent<PlayerController>().hasKey == true)
+        if (player.GetComponent<PlayerControllerServer>().hasKey == true)
         {
             if (door.GetComponent<DoorController>().fence == false)
             {
@@ -25,7 +25,7 @@ public class KeyAlertController : MonoBehaviour
             {
                 door.GetComponent<DoorController>().OpenFence();
             }
-            player.GetComponent<PlayerController>().hasKey = false;
+            player.GetComponent<PlayerControllerServer>().hasKey = false;
             Destroy(gameObject);
         }
     }
