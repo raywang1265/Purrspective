@@ -149,7 +149,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hostButton: {fileID: 1787517628}
   clientButton: {fileID: 1708517814}
-  serverButton: {fileID: 1001564452}
 --- !u!4 &202749952
 Transform:
   m_ObjectHideFlags: 0
@@ -208,7 +207,7 @@ MonoBehaviour:
   ConnectionData:
     Address: 127.0.0.1
     Port: 7777
-    ServerListenAddress: 127.0.0.1
+    ServerListenAddress: 0.0.0.0
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0

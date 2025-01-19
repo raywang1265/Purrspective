@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 
 public class MultiplayerUI : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class MultiplayerUI : MonoBehaviour
     void StartClient()
     {
         UpdateStatus("Starting Client...");
+        
+        // public ip
+        NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData("100.66.196.211", 7777);
         if (NetworkManager.Singleton.StartClient())
         {
             UpdateStatus("Client started successfully. Connecting...");
